@@ -62,7 +62,7 @@ if (Meteor.isClient) {
     this.autorun(function(){
 
                 Session.set('currentPage', latestPage());
-                Session.set('currentClass', findClass());
+                Session.set('currentClass', findClass()); //runs automatically when findClass() and latestPage() change, which will occur when the data is loaded.
 
     })
 
